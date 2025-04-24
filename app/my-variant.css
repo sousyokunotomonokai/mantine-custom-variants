@@ -1,0 +1,6 @@
+.mantine-Button-root[data-variant="my-button-variant"] {
+  background-color: var(--mantine-color-pink-filled);
+  @mixin hover {
+    background-color: var(--mantine-color-pink-filled-hover);
+  }
+}
