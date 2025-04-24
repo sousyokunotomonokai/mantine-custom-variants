@@ -1,20 +1,22 @@
 import "@mantine/core/styles.css";
-import React from "react";
+import "./my-variant.css";
+
 import {
-  MantineProvider,
   ColorSchemeScript,
   mantineHtmlProps,
+  MantineProvider,
 } from "@mantine/core";
+import React from "react";
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Mantineコンポーネントのカスタムバリアントの作り方",
+  description: "Mantineコンポーネントのカスタムバリアントの例",
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en" { ...mantineHtmlProps }>
       <head>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
@@ -24,7 +26,7 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={ theme }>{ children }</MantineProvider>
       </body>
     </html>
   );
